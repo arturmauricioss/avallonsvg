@@ -68,10 +68,9 @@
 .proj1 {
     flex: 1; /* Isso faz com que as divs ocupem o espaço disponível */
     border: 1px solid black; /* Apenas para visualização */
-    min-width: 500px;
     max-height: 500px;
     max-width: 800px;
-    padding: 4px;
+    padding: 4%;
     border-radius: 20px;
     border-top: none;
     border-left: none;
