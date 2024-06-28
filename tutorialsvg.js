@@ -100,4 +100,29 @@ document.addEventListener('DOMContentLoaded', function() {
             a.click();
         });
     });
+
+    // Evento de clique no código SVG para copiar para a área de transferência
+    const codeContainer = document.querySelector('.code-container');
+
+    codeContainer.addEventListener('click', function(event) {
+        event.preventDefault(); // Evita comportamentos padrão de eventos
+
+        const codeText = event.currentTarget.querySelector('.code-inner code').textContent.trim(); // Obtém o texto do código
+        navigator.clipboard.writeText(codeText).then(function() {
+            alert('Código copiado para a área de transferência!');
+        }).catch(function(err) {
+            console.error('Erro ao copiar texto: ', err);
+        });
+    });
+
+    codeContainer.addEventListener('touchstart', function(event) {
+        event.preventDefault(); // Evita comportamentos padrão de eventos
+
+        const codeText = event.currentTarget.querySelector('.code-inner code').textContent.trim(); // Obtém o texto do código
+        navigator.clipboard.writeText(codeText).then(function() {
+            alert('Código copiado para a área de transferência!');
+        }).catch(function(err) {
+            console.error('Erro ao copiar texto: ', err);
+        });
+    });
 });

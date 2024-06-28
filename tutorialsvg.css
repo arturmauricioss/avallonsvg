@@ -10,7 +10,7 @@
   /* --c11: #3cb371; */
   :root {
     --c11: #226d43;
-    --c22: #6a0dad;
+    --c22: #4B0082;
     --c33: #1e90ff;
     --c44: #000000;
     --c55: #ffffff;
@@ -40,25 +40,21 @@
 
 .titulo{
     text-align: center;
-    margin: 40px;
+    margin: 40px 2%;
     color: var(--c22);
     font-weight: 900;
 }
 /* Termina Geral e titulo
  Começa SVG app */
 
-.sectionsvg{
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* As duas divs ocuparão a mesma largura */
-    grid-gap: 20px; /* Espaçamento entre as divs */
-}
+
 
 #projects {
     display: flex;
     /* flex-direction: row; */
     width: 100%;
     height: 450px; /* Isso garante que a altura do contêiner se estenda até o fundo da janela de visualização */
-    margin: auto 2%;
+    margin: 10px 0;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Alinha o conteúdo verticalmente */
@@ -68,15 +64,20 @@
 .proj1 {
     flex: 1; /* Isso faz com que as divs ocupem o espaço disponível */
     border: 1px solid black; /* Apenas para visualização */
-    max-height: 500px;
-    max-width: 800px;
-    padding: 4%;
+    padding: 4px 2%;
     border-radius: 20px;
     border-top: none;
     border-left: none;
     border-right: 3px solid var(--c22);
     border-bottom: 2px solid var(--c22);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui uniformemente os itens verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    margin: 0 4%;
+    width: 90%;
+
 }
 
 
@@ -84,12 +85,13 @@
     text-align: center;
     font-weight: 900;
     padding-top: 8px;
-    color: var(--c11);
+    color: var(--c22);
+    font-size: 32px;
 }
 
 #svgPreview {
     width: 100%;
-    height: 40%;
+    height:200px;
     margin: 4px;
     padding: 4px;
     display: flex; /* Ativar o modelo de layout flexível */
@@ -107,24 +109,24 @@
   padding: 5px; /* Adiciona preenchimento à div */
   box-sizing: border-box; /* Faz com que o preenchimento esteja incluído na largura/altura da div */
   mix-blend-mode: difference; 
+  cursor: pointer;
 }
 
 #svgCode {
    width: 100%;
-    height: 100px;
     margin: 4px;
     padding: 4px;
     align-items: center;
 }
 #svgCode textarea{
-  height: 100%;
+  height: auto;
   width: 100%;
   /* color:var(--c22);  */
 }
 
 #compsvg {
-    height: 40px;
-    margin: 4px 4px 20px 4px;
+    height: auto;
+    margin: 4px;
     padding: 4px;
 }
 #imgproj1{
@@ -154,12 +156,6 @@
     transform: scale(0.95); /* Diminui ligeiramente o tamanho do botão quando clicado */
 }
 
-.proj1 {
-    display: flex; /* Ativar o modelo de layout flexível */
-    flex-direction: column; /* Os elementos dentro de .proj1 serão empilhados verticalmente */
-    justify-content: space-between; /* Distribui os itens uniformemente ao longo do eixo principal (verticalmente neste caso) */
-    align-items: center; /* Centraliza os itens ao longo do eixo transversal (horizontalmente neste caso) */
-}
 
 @media screen and (max-width: 600px) { /* Defina a largura de quebrar para 600px ou qualquer valor que desejar */
   #projects {
@@ -182,6 +178,7 @@ width: 25px !important;
 padding-left: 25px !important ;
 /* padding-right: 25px !important ; */
 height: 100px !important;
+cursor: text;
 }
 .CodeMirror.cm-s-default.CodeMirror-wrap{
 height: 100px !important;
@@ -191,8 +188,8 @@ height: 100px !important;
  começa Funcionalidades */
 
 .funcionalidades{
-    margin-left: 5%;
-    margin-bottom: 40px;
+
+    margin: 40px 0;
 }
 .funcionalidades h1{
     margin-bottom: 20px;
@@ -203,12 +200,12 @@ height: 100px !important;
     font-size: 24px;
     color: var(--c22);
 }
-.sectionproposta{
+#sectionprojeto{
     margin-top: 40px;
     padding: 4%;
     background-color: var(--c11);
 }
-.propostaorg h1{
+.svgorg h1{
     font-size: 3em;
     font-weight: 900;
     color: var(--c55);
@@ -216,14 +213,14 @@ height: 100px !important;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     /* background-color: var(--c11); */
 }
-.propostaorg h4{
+.svgorg h4{
     color: var(--c55);
     margin: 40px 0px;
     font-size: 30px;
     font-weight: 900;    
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
-.propostaorg p{
+.svgorg p{
     color: var(--c55);
     font-size: 24px;
     text-align: justify;
@@ -231,10 +228,114 @@ height: 100px !important;
     max-width: 1000px;
     margin: 0 auto;
 }
-.propostaorg p span{
-    color: #6a0dad;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
-}
+
 span.help{
     cursor: help;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--c11); /* Ajuste conforme seu esquema de cores */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--c55); /* Ajuste conforme seu esquema de cores */
+    font-size: 1.2em;
+    padding: 0 10px;
+    transition: color 0.3s;
+
+}
+
+.header a:hover {
+    color: var(--c22); /* Ajuste conforme seu esquema de cores */
+}
+
+.header .titulo {
+    margin: 0;
+    font-size: 1.6em;
+    color: var(--c55); /* Ajuste conforme seu esquema de cores */
+    text-align: center;
+    flex-grow: 1;
+}
+
+.section {
+    padding: 20px;
+}
+
+#projeto {
+    margin-top: 50px; /* Ajuste para corresponder ao tamanho do seu cabeçalho */
+}
+
+#tutorial {
+    margin-top: 50px; /* Ajuste para corresponder ao tamanho do seu cabeçalho */
+}
+
+/* Media query para telas menores que 400px */
+@media screen and (max-width: 400px) {
+    .header a {
+        display: none;
+    }
+
+    .header .titulo {
+        position: flex; /* Reverte o posicionamento absoluto */
+        transform: none; /* Remove a transformação */
+        flex-grow: 0; /* Impede que ocupe espaço extra */
+        text-align: center;
+        justify-content: center;
+    }
+}
+#sectiontutorial{
+
+    padding: 4%;
+    background-color: var(--c22);
+}
+a{
+    color: yellow;
+}
+.code-container {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.code-inner {
+    white-space: pre-wrap; /* Mantém a formatação original, incluindo quebras de linha */
+}
+
+
+.code-container::before {
+    content: "Clique para copiar";
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+pre {
+    margin: 0;
+}
+h5{
+
+    font-weight: 500;
+    padding-top: 8px;
+    color: white;
+    font-size: 32px;
+    text-align: left;
+    margin: 10px;
+
+}
+.spancolorido{
+    color: #5ec9ff;
 }
