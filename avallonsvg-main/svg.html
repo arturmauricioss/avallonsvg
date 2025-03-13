@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Artur, Mauricio, Curriculo, Projetos, Portfólio, Programação, Desenvolvimento, Dev, Web, Design, SVG">
+    <meta name="description" content="Editor e compilador SVG">
+    <meta name="author" content="Artur Maurício">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Artur Maurício">
+    <meta property="og:description" content="Currículo e Portfólio">
+    <meta property="og:image" content="https://arturmauricioss.github.io/media/img/logocolorido.png">
+    <meta property="og:url" content="https://arturmauricioss.github.io/">
+    <title>Avallon SVG</title>
+    <link rel="stylesheet" href="svg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+
+    <link rel="icon" type="image/png" href="media/img/logocolorido.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/xml/xml.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="#sectionprojeto" class="link-esquerdo">Projeto</a>
+        <h1 class="titulo">Avallon SVG</h1>
+        <a href="#sectiontutorial" class="link-direito">Tutorial</a>
+    </div>
+<main>
+    <div id="projects">
+        <div class="proj1">
+            <h3>Editor e Compilador SVG</h3>
+            <div id="svgPreview" class="quadriculado">
+                <img id="imgproj1" src="media/img/logocolorido.png" alt="Ícone de imagem">
+            </div>
+            <div id="svgCode">
+                <textarea id="svgCodeTextarea" placeholder="Insira o código SVG aqui"></textarea>
+            </div>
+            <div id="compsvg">
+                <button id="botaosvg">SVG</button>
+                <button id="botaopng">PNG</button>
+            </div>
+            <canvas id="canvas" style="display: none;"></canvas>
+        </div>
+    </div>
+    <div class="funcionalidades">
+        <h1>Funcionalidades</h1>
+        <p>Editor e Compilador SVG</p>
+        <p>Visualização em Tempo Real</p>
+        <p>Carregamento de Arquivos SVG</p>
+        <p>Compilação para SVG e PNG</p>
+        <p>Responsivo para Mobile</p>
+        <p>Seguro e de Código Aberto</p>
+    </div> 
+
+    <section id="sectionprojeto">
+        <div class="svgorg">
+            <h1>Projeto</h1>
+            <hr>
+            <br>
+            <h4>Editor e Compilador</h4>
+            <p>Avallon SVG permite você criar e editar facilmente suas próprias imagens gráficas vetoriais. O editor fornece uma experiência de edição de código avançada com destaque de sintaxe pelo estilizador CodeMirror.</p>
+            <h4>Visualização em Tempo Real</h4>
+            <p>À medida que você edita o código SVG no editor, a visualização em tempo real é atualizada <span class="help" title="Leia o tutorial">automaticamente</span> no painel de visualização que você pode editar pelo viewBox no seu SVG.</p>
+            <h4>Carregamento de Arquivos SVG</h4> 
+            <p>Além de criar SVGs do zero, você também pode carregar arquivos SVG existentes para editar aqui. Basta clicar na área de visualização (a área quadriculada) e selecionar o arquivo SVG desejado em seu computador.</p>
+            <h4>Compilação para SVG e PNG</h4>
+            <p>Uma vez satisfeito com o seu vetor gráfico, você pode compilar o código SVG em um arquivo SVG ou PNG para download para uso em outros projetos.</p>
+            <h4>Responsividade</h4>
+            <p>Avallon SVG é projetado para funcionar em uma variedade de dispositivos, desde desktops até dispositivos móveis. Ele usa técnicas de design responsivo para garantir uma experiência consistente em diferentes tamanhos de tela.</p>
+            <h4>Seguro e de Código Aberto</h4>
+            <p>É importante dizer que Avallon SVG apenas instrui seu computador no que ele deve fazer de acordo com o seu requerimento, portanto nada do que você faça sairá do seu computador pois todo código de script acontece bem aí, o projeto é de código aberto e está disponível em meu <a href="https://github.com/arturmauricioss/avallonsvg"><span >Github</span></a>.
+            </p>
+        </div>    
+    </section>
+
+    <section id="sectiontutorial">
+        <div class="svgorg">
+            <h1>Tutorial</h1>
+            <hr>
+            <br>
+            <h4>Area quadriculada</h4>
+            <p>Caso você já tenha seu arquivo SVG e queira editá-lo clique na área quadriculada para carregar seu arquivo. O código do SVG será gerado e mostrado no Campo de texto. Você também pode conseguir seu SVG através dos sites <a href="https://icons.getbootstrap.com" target="_blank">IconsGetbootstrap</a>, <a href="https://www.flaticon.com" target="_blank">FlatIcon</a>, e <a href="https://www.freepik.com/free-photos-vectors/free-svg" target="_blank">Freepik</a>.
+            </p>
+            <h4>Campo de Texto</h4>
+            <p>Caso você não tenha um arquivo basta fazê-lo ou colar algum na área de texto. A área quadriculada irá exibir sua imagem de acordo com a configuração do código, e com atualização em tempo real, se você não tiver um código pode consegui-los através dos sites citados acima</p>
+            <h4>SVG e PNG</h4> 
+            <p>Os botões SVG e PNG compilam o código em um arquivo, se o <span class="spancolorido">width=""</span> e <span class="spancolorido">height=""</span> de seu arquivo estiverem muito altos a imagem poderá demorá para carregar, não exagere, afinal é seu computador que irá fazer o processamento width="7680" height="4320" já é uma imagem 8k. testei 16000x16000 e meu pc travou uns 6 segundos mas baixou, não coloquei limitador, cada um sabe o que faz, se não souber fique com até width="2000" height="2000" de cada.
+            </p>        
+            <br>            
+            <br>
+            <hr>
+            <br>
+        </div>
+        <div class="svgorg">
+            <h1>Dicas</h1>
+            <hr>
+            <h4>Exemplo de SVG para testar e editar</h4>
+            <p>Criei este exemplo formado de 3 linhas em um estilo cursivo semelhante a uma assinatura, há uma distancia de apenas alguns pixels uma da outra, cada uma com uma cor diferente, clique no campo a seguir para copiar o código e cole no campo de texto lá em cima para ver como fica. Sinta-se livre para editar o quanto quiser!</p>
+            <br>
+            <div class="code-container">
+                <div class="code-inner">    
+<pre><code>&lt;svg width=&quot;280&quot; height=&quot;280&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 480 480&quot;&gt;
+&lt;g transform=&quot;translate(0, 26)&quot;&gt;
+&lt;path d=&quot;M-1,0 Q0,120 8,40 T15,50 T30,35 T40,30 T50,30 T60,40 T70,50 T80,40 T260,60 T160,10 T100,40 T270,80 T320,40&quot; fill=&quot;none&quot; stroke=&quot;blue&quot; stroke-width=&quot;2&quot;/&gt;&lt;/g&gt; 
+&lt;g transform=&quot;translate(3, 23)&quot;&gt;
+&lt;path d=&quot;M-1,0 Q0,120 8,40 T15,50 T30,35 T40,30 T50,30 T60,40 T70,50 T80,40 T260,60 T160,10 T100,40 T270,80 T320,40&quot; fill=&quot;none&quot; stroke=&quot;yellow&quot; stroke-width=&quot;2&quot;/&gt;&lt;/g&gt;
+&lt;g transform=&quot;translate(6, 20)&quot;&gt;
+&lt;path d=&quot;M-1,0 Q0,120 8,40 T15,50 T30,35 T40,30 T50,30 T60,40 T70,50 T80,40 T260,60 T160,10 T100,40 T270,80 T320,40&quot; fill=&quot;none&quot; stroke=&quot;green&quot; stroke-width=&quot;2&quot;/&gt;&lt;/g&gt;&lt;/svg&gt;
+</code></pre>   </div>
+            </div>
+            <h4>Lista básica de Atributos</h4>
+
+            <h4>Atributos Globais</h4>
+
+            <p><span class="spancolorido">id</span>: Define um identificador único para o elemento.</p>
+            <p><span class="spancolorido">class</span>: Define uma ou mais classes CSS para o elemento.</p>
+            <p><span class="spancolorido">style</span>: Define estilos CSS diretamente no elemento SVG.</p>
+            <p><span class="spancolorido">xml:lang, xml:space, xml:base</span>: Atributos relacionados ao XML.</p>
+
+            <h4>Atributos de Dimensão e Posicionamento</h4>
+
+            <p><span class="spancolorido">width, height</span>: Define a largura e altura do elemento SVG.</p>
+            <p><span class="spancolorido">x, y</span>: Define as coordenadas x e y do elemento.</p>
+            <p><span class="spancolorido">viewBox</span>: Define a caixa de visualização que determina o tamanho e a posição visível do conteúdo SVG.</p>
+            <p><span class="spancolorido">preserveAspectRatio</span>: Define como o conteúdo SVG deve ser ajustado dentro do viewBox.</p>
+
+            <h4>Atributos de Preenchimento e Contorno</h4>
+
+            <p><span class="spancolorido">fill</span>: Define a cor ou padrão de preenchimento do elemento.</p>
+            <p><span class="spancolorido">fill-opacity</span>: Define a opacidade do preenchimento.</p>
+            <p><span class="spancolorido">stroke</span>: Define a cor ou padrão de contorno do elemento.</p>
+            <p><span class="spancolorido">stroke-width</span>: Define a largura do contorno.</p>
+            <p><span class="spancolorido">stroke-opacity</span>: Define a opacidade do contorno.</p>
+            <p><span class="spancolorido">stroke-linecap</span>: Define o estilo da extremidade do contorno (butt, round, square).</p>
+            <p><span class="spancolorido">stroke-linejoin</span>: Define o estilo de união entre segmentos do contorno (miter, round, bevel).</p>
+            <p><span class="spancolorido">stroke-dasharray</span>: Define um padrão de traço para o contorno (por exemplo, "5, 2" para traço e espaço).</p>
+
+            <h4>Atributos de Transformação</h4>
+
+            <p><span class="spancolorido">transform</span>: Aplica transformações (translate, rotate, scale, etc.) ao elemento.</p>
+
+            <h4>Atributos de Evento:</h4>
+
+            <p><span class="spancolorido">onclick, onmouseover, onmouseout</span>, etc.: Atributos de evento para interações JavaScript.</p>
+
+            <h4>Atributos Relacionados à Gráficos e Texto</h4>
+
+            <p><span class="spancolorido">d</span>: Define os comandos de caminho para elementos como <code>&lt;path&gt;</code>.</p>
+            <p><span class="spancolorido">points</span>: Define os pontos de um polígono ou polilinha.</p>
+            <p><span class="spancolorido">text-anchor</span>: Define o alinhamento horizontal do texto.</p>
+            <p><span class="spancolorido">font-family, font-size, font-style, font-weight</span>: Define a família da fonte, tamanho, estilo e peso do texto.</p>
+
+            <h4>Atributos de Efeito</h4>
+
+            <p><span class="spancolorido">filter</span>: Aplica filtros de efeito visual (blur, saturate, etc.) ao elemento.</p>
+
+            <h4>Atributos Específicos de Elementos</h4>
+
+            <p>Além desses, cada elemento SVG pode ter atributos específicos dependendo do tipo de elemento (por exemplo, cx, cy, r para <code>&lt;circle&gt;</code>, width, height para <code>&lt;rect&gt;</code>, etc.).</p>
+            <br>
+            <p>O site <a href="https://www.w3schools.com/graphics/svg_intro.asp">w3schools</a> tem um tutorial completo sobre SVG!
+            </p>
+        </div>
+        <div class="svgorg">
+            <h4>Bonus</h4>
+            <p>Para melhorar a manipulação de seu svg dê um id ou classe para cada svg e path, em seguida após a tag de fechamento svg abra a tag style e aplique seu conhecimento em CSS, não se esqueça de fechar a tag style ao final.</p>
+        </div>
+    </section>
+</main>
+    <script src="svg.js"></script>
+</body>
+</html>

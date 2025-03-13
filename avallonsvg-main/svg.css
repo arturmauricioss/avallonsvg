@@ -1,0 +1,380 @@
+/* Controle Geral */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* --c11: #3cb371; */
+:root {
+  --c11: #226d43;
+  --c22: #4b0082;
+  --c33: #1e90ff;
+  --c44: #000000;
+  --c55: #ffffff;
+  --c66: #333333;
+  --cc77: #999999;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+  font-family: Arial, sans-serif; 
+}
+body{
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--c11);
+  font-weight: 300;
+  text-align: center;
+}
+
+.titulo {
+  text-align: center;
+  margin: 40px 2%;
+  color: var(--c22);
+  font-weight: 900;
+}
+/* Termina Geral e titulo
+ Começa SVG app */
+
+#projects {
+  display: flex;
+  /* flex-direction: row; */
+  width: 100%;
+  height: 450px; /* Isso garante que a altura do contêiner se estenda até o fundo da janela de visualização */
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Alinha o conteúdo verticalmente */
+  align-items: center; /* Alinha o conteúdo horizontalmente */
+  margin-top: 50px;
+}
+main {
+  padding: 0px 0px;
+  display: block;
+  margin: 0;
+  overflow-y: scroll;
+  height: 100%;
+  padding-right: 0px; /* Espaço para a barra de rolagem personalizada */
+  scroll-behavior: smooth;
+  box-sizing: content-box;
+}
+
+main::-webkit-scrollbar {
+  width: 14px; /* Largura da barra de rolagem */
+  position: absolute;
+  background: transparent;
+}
+
+main::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 0px;
+  margin-bottom: 58px;
+
+}
+main::-webkit-scrollbar-thumb {
+  background: var(--c22);
+  border: 3px solid white;
+  border-radius: 6px;
+}
+main::-webkit-scrollbar-thumb:hover {
+  background: var(--c11);
+}
+
+.proj1 {
+  flex: 1; /* Isso faz com que as divs ocupem o espaço disponível */
+  border: 1px solid black; /* Apenas para visualização */
+  padding: 4px 2%;
+  border-radius: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: 3px solid var(--c22);
+  border-bottom: 2px solid var(--c22);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribui uniformemente os itens verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  margin: 0px 4% 0px;
+  width: 90%;
+}
+
+.proj1 h3 {
+  text-align: center;
+  font-weight: 900;
+  padding-top: 8px;
+  color: var(--c22);
+  font-size: 32px;
+}
+
+#svgPreview {
+  width: 100%;
+  height: 200px;
+  margin: 4px;
+  padding: 4px;
+  display: flex; /* Ativar o modelo de layout flexível */
+  justify-content: center; /* Centralizar horizontalmente */
+  align-items: center; /* Centralizar verticalmente */
+}
+#svgPreview i {
+  font-size: 64px; /* Tamanho do ícone */
+  color: #eee; /* Cor do ícone */
+}
+
+.quadriculado {
+  background-image: linear-gradient(
+    45deg,
+    #ccc 25%,
+    transparent 25%,
+    transparent 75%,
+    #ccc 75%,
+    #ccc 100%
+  );
+  background-size: 5px 5px; /* Tamanho dos quadriculados */
+  padding: 5px; /* Adiciona preenchimento à div */
+  box-sizing: border-box; /* Faz com que o preenchimento esteja incluído na largura/altura da div */
+  mix-blend-mode: difference;
+  cursor: pointer;
+}
+
+#svgCode {
+  width: 100%;
+  margin: 4px;
+  padding: 4px;
+  align-items: center;
+}
+#svgCode textarea {
+  height: auto;
+  width: 100%;
+  /* color:var(--c22);  */
+}
+
+#compsvg {
+  height: auto;
+  margin: 4px;
+  padding: 4px;
+}
+#imgproj1 {
+  width: 32px;
+  height: 32px;
+}
+
+#compsvg button {
+  padding: 0px 2vw; /* Use 5vw para tornar o padding responsivo */
+  background-color: var(--c11); /* Cor de fundo do botão */
+  color: var(--c55); /* Cor do texto do botão */
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.6em;
+  transition: background-color 0.3s, transform 0.3s;
+  max-width: 100%; /* Limite a largura máxima para evitar overflow */
+  margin: 0px 5px; /* Adiciona margem entre os botões */
+}
+
+#compsvg button:hover {
+  background-color: var(--c22); /* Cor de fundo alterada ao passar o mouse */
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho do botão */
+}
+
+#compsvg button:active {
+  transform: scale(
+    0.95
+  ); /* Diminui ligeiramente o tamanho do botão quando clicado */
+}
+
+@media screen and (max-width: 600px) {
+  /* Defina a largura de quebrar para 600px ou qualquer valor que desejar */
+  #projects {
+    flex-direction: column; /* Altere a direção do layout flexível para coluna em telas pequenas */
+  }
+}
+@media screen and (max-width: 600px) {
+  .sectionsvg {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+  }
+}
+.CodeMirror {
+  width: 100% !important;
+}
+
+.CodeMirror-gutter {
+  width: 25px !important;
+}
+.CodeMirror-scroll {
+  padding-left: 25px !important ;
+  /* padding-right: 25px !important ; */
+  height: 100px !important;
+  cursor: text;
+}
+.CodeMirror.cm-s-default.CodeMirror-wrap {
+  height: 100px !important;
+}
+
+/* Termina SVG app
+ começa Funcionalidades */
+
+.funcionalidades {
+  margin: 40px 0;
+}
+.funcionalidades h1 {
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+.funcionalidades p {
+  text-align: center;
+  font-size: 24px;
+  color: var(--c22);
+}
+#sectionprojeto {
+  margin-top: 40px;
+  padding: 4%;
+  background-color: var(--c11);
+}
+
+.svgorg h1 {
+  font-size: 3em;
+  font-weight: 900;
+  color: var(--c55);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* background-color: var(--c11); */
+}
+.svgorg h4 {
+  color: var(--c55);
+  margin: 40px 0px;
+  font-size: 30px;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.svgorg p {
+  color: var(--c55);
+  font-size: 24px;
+  text-align: justify;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+span.help {
+  cursor: help;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--c11); /* Ajuste conforme seu esquema de cores */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.header a {
+  text-decoration: none;
+  color: var(--c55); /* Ajuste conforme seu esquema de cores */
+  font-size: 1.2em;
+  padding: 0 10px;
+  transition: color 0.3s;
+}
+
+.header a:hover {
+  color: var(--c22); /* Ajuste conforme seu esquema de cores */
+}
+
+.header .titulo {
+  margin: 0;
+  font-size: 1.6em;
+  color: var(--c55); /* Ajuste conforme seu esquema de cores */
+  text-align: center;
+  flex-grow: 1;
+}
+
+.section {
+  padding: 20px;
+}
+
+#projeto {
+  margin-top: 50px; /* Ajuste para corresponder ao tamanho do seu cabeçalho */
+}
+
+#tutorial {
+  margin-top: 50px; /* Ajuste para corresponder ao tamanho do seu cabeçalho */
+}
+
+/* Media query para telas menores que 400px */
+@media screen and (max-width: 400px) {
+  .header a {
+    display: none;
+  }
+
+  .header .titulo {
+    position: flex; /* Reverte o posicionamento absoluto */
+    transform: none; /* Remove a transformação */
+    flex-grow: 0; /* Impede que ocupe espaço extra */
+    text-align: center;
+    justify-content: center;
+  }
+}
+#sectiontutorial {
+  padding: 4%;
+  background-color: var(--c22);
+}
+a {
+  color: yellow;
+}
+.code-container {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.code-inner {
+  white-space: pre-wrap; /* Mantém a formatação original, incluindo quebras de linha */
+}
+
+.code-container::before {
+  content: "Clique para copiar";
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+pre {
+  margin: 0;
+}
+h5 {
+  font-weight: 500;
+  padding-top: 8px;
+  color: white;
+  font-size: 32px;
+  text-align: left;
+  margin: 10px;
+}
+.spancolorido {
+  color: #5ec9ff;
+}
